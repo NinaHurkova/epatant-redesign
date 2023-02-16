@@ -1,0 +1,15 @@
+@font-face {
+  font-family: ProductSans;
+  src: url("ProductSans-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+@font-face {
+  font-family: ProductSans;
+  src: url("ProductSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+@font-face {
+  font-family: ProductSans;
+  src: url("ProductSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
