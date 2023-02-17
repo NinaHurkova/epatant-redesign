@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="htdocs/font/font.css">
     <link rel="stylesheet" href="htdocs/font/font-icon.css">
 
+    <link rel="stylesheet" href="htdocs/css/select2.min.css">
     <link rel="stylesheet" href="htdocs/css/base.css">
 
     <script src="htdocs/js/jquery-3.6.3.min.js"></script>
@@ -27,7 +28,7 @@
                     </nav>
                     <div class="topnav-right">
                         <a href="#"
-                           class="request-link"
+                           class="request-link menu-link"
                            data-bs-toggle="modal" data-bs-target="#modalRequest"
                         >Make request</a>
                         <div class="top-social">
@@ -110,7 +111,7 @@
                     </ul>
                 </div>
                 <div class="order-md-1 flex-grow-1 text-center">
-                    <p>&copy; Epatant 2007 — 2023 </p>
+                    <p class="m-0">&copy; Epatant 2007 — 2023 </p>
                 </div>
             </div>
         </footer>
@@ -144,8 +145,8 @@
                         </div>
                         <div class="mb-3">
                             <label for="service" class="form-label">Service</label>
-                            <select id="service" class="form-select">
-                                <option selected>Select a service fom the list</option>
+                            <select id="service" class="form-select selectpicker" data-placeholder="Select a service fom the list">
+                                <option value=""></option>
                                 <option value="1">Interior design</option>
                                 <option value="2">Architectural 3d visualization</option>
                                 <option value="3">Landscape design</option>
@@ -153,8 +154,8 @@
                         </div>
                         <div class="mb-3">
                             <label for="property" class="form-label">Property type</label>
-                            <select id="property" class="form-select">
-                                <option selected>Select a property type fom the list</option>
+                            <select id="property" class="form-select selectpicker" data-placeholder="Select a property type fom the list">
+                                <option value=""></option>
                                 <option value="1">House / apartment</option>
                                 <option value="2">Restaurant / Cafe / Bar</option>
                                 <option value="3">Hotel</option>
@@ -183,6 +184,7 @@
     </div>
 
     <script src="htdocs/js/bootstrap.bundle.min.js"></script>
+    <script src="htdocs/js/select2.min.js"></script>
     <script src="htdocs/js/main.js"></script>
 </body>
 </html>

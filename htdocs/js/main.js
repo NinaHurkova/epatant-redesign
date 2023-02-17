@@ -28,3 +28,15 @@ $("#menuToggle").on("click",function(){
     $("body").toggleClass('overflow-hidden');
 });
 
+$(document).ready(function() {
+    $('.selectpicker').each(function () {
+        let selectpicker = $(this);
+        let placeholder = $(selectpicker).data('placeholder');
+        selectpicker.select2({
+            dropdownCssClass: 'selectpicker-dropdown',
+            minimumResultsForSearch: '-1',
+            placeholder: placeholder
+        });
+    })
+});
+
