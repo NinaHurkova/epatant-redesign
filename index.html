@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="htdocs/font/font-icon.css">
 
     <link rel="stylesheet" href="htdocs/css/select2.min.css">
+    <link rel="stylesheet" href="htdocs/css/photoswipe.css">
     <link rel="stylesheet" href="htdocs/css/base.css">
 
     <script src="htdocs/js/jquery-3.6.3.min.js"></script>
@@ -24,11 +25,11 @@
                         <a href="" class="menu-link">About us</a>
                         <a href="" class="menu-link">Projects</a>
                         <a href="" class="menu-link">Services</a>
-                        <a href="" class="menu-link is-active">Contacts</a>
+                        <a href="" class="menu-link">Contacts</a>
                     </nav>
                     <div class="topnav-right">
                         <a href="#"
-                           class="request-link menu-link"
+                           class="menu-link"
                            data-bs-toggle="modal" data-bs-target="#modalRequest"
                         >Make request</a>
                         <div class="top-social">
@@ -57,14 +58,92 @@
             </div>
         </header>
         <main class="main">
-
-
-
+            <section class="project-gallery">
+                <div class="gallery">
+                    <a href="htdocs/img/246.jpg"
+                       data-pswp-width="2560"
+                       data-pswp-height="1821"
+                       target="_blank"
+                       class="gallery-item"
+                    >
+                        <img src="htdocs/img/246.jpg" alt="" />
+                        <div class="gallery-item-caption gallery-item-caption--right">
+                            <h2 class="gallery-item-title">Project name</h2>
+                            <p class="gallery-item-description">restaurant, 250 sq.m, Warsaw, Poland</p>
+                        </div>
+                    </a>
+                    <div class="gallery-item-group">
+                        <a href="htdocs/img/photo-1600489000022-c2086d79f9d4.jpeg"
+                           data-pswp-width="1000"
+                           data-pswp-height="1333"
+                           target="_blank"
+                           class="gallery-item"
+                        >
+                            <img src="htdocs/img/photo-1600489000022-c2086d79f9d4.jpeg" alt="" />
+                            <div class="gallery-item-caption gallery-item-caption--left">
+                                <h2 class="gallery-item-title">Project name long</h2>
+                                <p class="gallery-item-description">restaurant, 250 sq.m, Warsaw, Poland</p>
+                            </div>
+                        </a>
+                        <a href="htdocs/img/267.jpg"
+                           data-pswp-width="2560"
+                           data-pswp-height="1767"
+                           target="_blank"
+                           class="gallery-item"
+                        >
+                            <img src="htdocs/img/267.jpg" alt="" />
+                            <div class="gallery-item-caption gallery-item-caption--right">
+                                <h2 class="gallery-item-title">Project name very long bla bla bla</h2>
+                                <p class="gallery-item-description">restaurant, 250 sq.m, Warsaw, Poland</p>
+                            </div>
+                        </a>
+                    </div>
+                    <a href="htdocs/img/268.jpg"
+                       data-pswp-width="2560"
+                       data-pswp-height="1792"
+                       target="_blank"
+                       class="gallery-item"
+                    >
+                        <img src="htdocs/img/268.jpg" alt="" />
+                        <div class="gallery-item-caption gallery-item-caption--right">
+                            <h2 class="gallery-item-title">Project name</h2>
+                            <p class="gallery-item-description">restaurant, 250 sq.m, Warsaw, Poland</p>
+                        </div>
+                    </a>
+                    <div class="gallery-item-group">
+                        <a href="htdocs/img/269.jpg"
+                           data-pswp-width="2560"
+                           data-pswp-height="1792"
+                           target="_blank"
+                           class="gallery-item"
+                        >
+                            <img src="htdocs/img/269.jpg" alt="" />
+                            <div class="gallery-item-caption gallery-item-caption--left">
+                                <h2 class="gallery-item-title">Project name</h2>
+                                <p class="gallery-item-description">restaurant, 250 sq.m, Warsaw, Poland</p>
+                            </div>
+                        </a>
+                        <a href="htdocs/img/297.jpg"
+                           data-pswp-width="2560"
+                           data-pswp-height="1792"
+                           target="_blank"
+                           class="gallery-item"
+                        >
+                            <img src="htdocs/img/297.jpg" alt="" />
+                            <div class="gallery-item-caption gallery-item-caption--right">
+                                <h2 class="gallery-item-title">Project name</h2>
+                                <p class="gallery-item-description">restaurant, 250 sq.m, Warsaw, Poland</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <button class="btn btn--main btn-show">Show more <span class="icon-ch-down"></span></button>
+            </section>
         </main>
         <footer class="footer">
             <div class="footer-contacts d-md-flex w-100 gap-md-2">
                 <div class="footer-request order-md-1 flex-grow-1">
-                    <button class="btn btn--main btn--l footer-request-button"
+                    <button class="btn btn--main justify-content-center mx-auto btn--l footer-request-button"
                             data-bs-toggle="modal" data-bs-target="#modalRequest"
                     >Make request</button>
                 </div>
@@ -185,6 +264,9 @@
 
     <script src="htdocs/js/bootstrap.bundle.min.js"></script>
     <script src="htdocs/js/select2.min.js"></script>
+    <script src="htdocs/js/photoswipe/photoswipe-lightbox.umd.min.js"></script>
+    <script src="htdocs/js/photoswipe/photoswipe.umd.min.js"></script>
     <script src="htdocs/js/main.js"></script>
+
 </body>
 </html>
