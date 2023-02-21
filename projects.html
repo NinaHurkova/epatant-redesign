@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Epatant | Main</title>
+    <title>Epatant | Projects</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="htdocs/img/favicon.png" type="image/x-icon">
@@ -23,7 +23,7 @@
                 <div class="topnav-menu">
                     <nav class="menu">
                         <a href="" class="menu-link">About us</a>
-                        <a href="projects.html" class="menu-link">Projects</a>
+                        <a href="projects.html" class="menu-link is-active">Projects</a>
                         <a href="" class="menu-link">Services</a>
                         <a href="" class="menu-link">Contacts</a>
                     </nav>
@@ -58,13 +58,27 @@
             </div>
         </header>
         <main class="main">
+            <section class="projects-header">
+                <div class="page-title">
+                    <h2 class="page-title-title">Projects</h2>
+                </div>
+                <div class="projects-description">
+                    <div class="projects-description-description">
+                        <p>Пафосна цитата про наші роботи. Буквально пару речень. Але об була можливість в адмінці вписати. Зліва фільтр по проектах</p>
+                    </div>
+                    <div class="projects-filter">
+                        <span id="all" class="projects-filter-item is-active">all</span>
+                        <span id="house" class="projects-filter-item">house</span>
+                        <span id="restaurant" class="projects-filter-item">restaurant</span>
+                        <span id="commercial" class="projects-filter-item">commercial</span>
+                    </div>
+                </div>
+            </section>
             <section class="project-gallery gallery--ajax">
-                <div class="gallery gallery--lightbox">
-                    <a href="htdocs/img/246.jpg"
-                       data-pswp-width="2560"
-                       data-pswp-height="1821"
-                       target="_blank"
-                       class="gallery-item"
+                <div class="gallery">
+                    <a href="project.html"
+                       class="gallery-item sortable"
+                       data-category="house"
                     >
                         <img src="htdocs/img/246.jpg" alt="" />
                         <div class="gallery-item-caption">
@@ -72,11 +86,9 @@
                             <p class="gallery-item-description">restaurant, 250 sq.m, Warsaw, Poland</p>
                         </div>
                     </a>
-                    <a href="htdocs/img/photo-1600489000022-c2086d79f9d4.jpeg"
-                       data-pswp-width="1000"
-                       data-pswp-height="1333"
-                       target="_blank"
-                       class="gallery-item"
+                    <a href="project.html"
+                       class="gallery-item sortable"
+                       data-category="restaurant"
                     >
                         <img src="htdocs/img/photo-1600489000022-c2086d79f9d4.jpeg" alt="" />
                         <div class="gallery-item-caption">
@@ -84,11 +96,9 @@
                             <p class="gallery-item-description">restaurant, 250 sq.m, Warsaw, Poland</p>
                         </div>
                     </a>
-                    <a href="htdocs/img/267.jpg"
-                       data-pswp-width="2560"
-                       data-pswp-height="1767"
-                       target="_blank"
-                       class="gallery-item"
+                    <a href="project.html"
+                       class="gallery-item sortable"
+                       data-category="house"
                     >
                         <img src="htdocs/img/267.jpg" alt="" />
                         <div class="gallery-item-caption">
@@ -96,11 +106,9 @@
                             <p class="gallery-item-description">restaurant, 250 sq.m, Warsaw, Poland</p>
                         </div>
                     </a>
-                    <a href="htdocs/img/268.jpg"
-                       data-pswp-width="2560"
-                       data-pswp-height="1792"
-                       target="_blank"
-                       class="gallery-item"
+                    <a href="project.html"
+                       class="gallery-item sortable"
+                       data-category="restaurant"
                     >
                         <img src="htdocs/img/268.jpg" alt="" />
                         <div class="gallery-item-caption">
@@ -108,11 +116,9 @@
                             <p class="gallery-item-description">restaurant, 250 sq.m, Warsaw, Poland</p>
                         </div>
                     </a>
-                    <a href="htdocs/img/269.jpg"
-                       data-pswp-width="2560"
-                       data-pswp-height="1792"
-                       target="_blank"
-                       class="gallery-item"
+                    <a href="project.html"
+                       class="gallery-item sortable"
+                       data-category="commercial"
                     >
                         <img src="htdocs/img/269.jpg" alt="" />
                         <div class="gallery-item-caption">
@@ -120,11 +126,9 @@
                             <p class="gallery-item-description">restaurant, 250 sq.m, Warsaw, Poland</p>
                         </div>
                     </a>
-                    <a href="htdocs/img/297.jpg"
-                       data-pswp-width="2560"
-                       data-pswp-height="1792"
-                       target="_blank"
-                       class="gallery-item"
+                    <a href="project.html"
+                       class="gallery-item sortable"
+                       data-category="house"
                     >
                         <img src="htdocs/img/297.jpg" alt="" />
                         <div class="gallery-item-caption">
@@ -263,6 +267,43 @@
     <script src="htdocs/js/photoswipe/photoswipe-lightbox.umd.min.js"></script>
     <script src="htdocs/js/photoswipe/photoswipe.umd.min.js"></script>
     <script src="htdocs/js/main.js"></script>
+
+    <script type="text/javascript">
+
+        function replaceElementTag(targetSelector, newTagString) {
+            $(targetSelector).each(function(){
+                var newElem = $(newTagString, {html: $(this).html()});
+                $.each(this.attributes, function() {
+                    newElem.attr(this.name, this.value);
+                });
+                $(this).replaceWith(newElem);
+            });
+        }
+
+        $( '.projects-filter-item' ).on( 'click', function() {
+
+            $( '.projects-filter-item' ).removeClass('is-active');
+            $(this).addClass('is-active');
+
+          const categoryName = $(this).attr('id');
+
+          if ( categoryName == 'all' ) {
+            $( '.sortable' ).removeClass( 'd-none' ).each(function () {
+                replaceElementTag(this, '<a></a>');
+            });
+          } else {
+            $( '.sortable' ).addClass( 'd-none' ).each(function () {
+                replaceElementTag(this, '<div></div>');
+                console.log($(this).prop("attributes"));
+                // console.log($(this).children[0].dataset.pswpHeight);
+            });
+            $( '.sortable[data-category=' + categoryName + ']' ).removeClass( 'd-none' ).each(function () {
+                replaceElementTag(this, '<a></a>');
+            });
+          }
+
+        });
+    </script>
 
 </body>
 </html>
