@@ -58,7 +58,7 @@
             </div>
         </header>
         <main class="main">
-            <section class="project-header">
+            <section class="page-header project-header">
                 <div class="page-title">
                     <h2 class="page-title-title">Project name long</h2>
                 </div>
@@ -145,6 +145,85 @@
                     </div>
                 </div>
             </section>
+            <section class="feedback">
+                <div class="feedback-social">
+                    <button class="btn btn--s btn--outline-main flex-shrink-0">Leave a comment</button>
+                    <div class="feedback-share">
+                        <span class="fw-500">Share</span>
+                        <a href="#" class="btn btn--social">
+                            <em class="icon icomoon-facebook"></em>
+                        </a>
+                        <a href="#" class="btn btn--social">
+                            <em class="icon icomoon-twitter"></em>
+                        </a>
+                        <a href="#" class="btn btn--social">
+                            <em class="icon icomoon-pinterest"></em>
+                        </a>
+                    </div>
+                </div>
+                <div class="comments">
+                    <h4 class="comments-title">Comments:</h4>
+                    <div class="comments-list">
+                        <div class="comment">
+                            <span class="comment-avatar">K</span>
+                            <div class="comment-wrapper">
+                                <div class="comment-header">
+                                    <span class="comment-author">Klaudia Adamiak</span>
+                                    <span class="comment-date">5 days ago</span>
+                                </div>
+                                <div class="comment-body">
+                                    <div>Great atmosphere, really nice lighting.</div>
+                                    <button class="comment-link">Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment comment--next">
+                            <span class="comment-avatar">E</span>
+                            <div class="comment-wrapper">
+                                <div class="comment-header">
+                                    <span class="comment-author">Epatant</span>
+                                    <span class="comment-date">5 days ago</span>
+                                </div>
+                                <div class="comment-body">
+                                    <div>Thank you</div>
+                                    <button class="comment-link">Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comment">
+                            <span class="comment-avatar">V</span>
+                            <div class="comment-wrapper">
+                                <div class="comment-header">
+                                    <span class="comment-author">Vitalii Mishchenko1</span>
+                                    <span class="comment-date">12 days ago</span>
+                                </div>
+                                <div class="comment-body">
+                                    <div>Your designs are so beautiful, and definitely top-notch!!!
+                                    Let’s follow each other so we can connect.</div>
+                                    <button class="comment-link">Reply</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="comments-form">
+                    <div class="mb-3">
+                        <label for="commentName" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="commentName" placeholder="Enter your name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="commentEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="commentEmail" placeholder="Enter your email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="commentMessage" class="form-label">Message</label>
+                        <textarea id="commentMessage" class="form-control" placeholder="What are you thought about this project?"></textarea>
+                    </div>
+                    <div class="text-end mt-5">
+                        <button type="submit" class="btn btn--outline-main">Post your comment</button>
+                    </div>
+                </form>
+            </section>
         </main>
         <footer class="footer">
             <div class="footer-contacts d-md-flex w-100 gap-md-2">
@@ -180,19 +259,19 @@
             </div>
             <div class="footer-settings d-md-flex w-100 gap-md-2">
                 <div class="footer-settings-theme order-md-2">
-                    <ul>
-                        <li></li>
-                        <li></li>
-                    </ul>
+                    <button id="theme-toggle" class="theme-toggle">
+                        <span class="light" title="light"></span>
+                        <span class="dark" title="dark"></span>
+                    </button>
                 </div>
                 <div class="footer-settings-accent order-md-0">
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                    <ul class="accent-toggle">
+                        <li class="colors" data-color="pink" title="pink"></li>
+                        <li class="colors" data-color="orange" title="orange"></li>
+                        <li class="colors" data-color="yellow" title="yellow"></li>
+                        <li class="colors" data-color="green" title="green"></li>
+                        <li class="colors" data-color="blue" title="blue"></li>
+                        <li class="colors" data-color="gray" title="gray"></li>
                     </ul>
                 </div>
                 <div class="order-md-1 flex-grow-1 text-center">
