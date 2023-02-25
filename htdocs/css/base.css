@@ -13479,6 +13479,9 @@ body {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
+.lang-menu-selected {
+  display: none;
+}
 .lang-menu-list {
   display: -webkit-box;
   display: -ms-flexbox;
