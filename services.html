@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Epatant | Projects</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="htdocs/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="htdocs/font/font.css">
+    <link rel="stylesheet" href="htdocs/font/font-icon.css">
+
+    <link rel="stylesheet" href="htdocs/css/select2.min.css">
+    <link rel="stylesheet" href="htdocs/css/photoswipe.css">
+    <link rel="stylesheet" href="htdocs/css/base.css">
+
+    <script src="htdocs/js/jquery-3.6.3.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid container--custom">
+        <header class="header">
+            <div class="topnav">
+                <a href="index.html" class="topnav-logo"><h1>Epatant</h1></a>
+                <div class="topnav-menu">
+                    <nav class="menu">
+                        <a href="" class="menu-link">About us</a>
+                        <a href="projects.html" class="menu-link">Projects</a>
+                        <a href="services.html" class="menu-link is-active">Services</a>
+                        <a href="" class="menu-link">Contacts</a>
+                    </nav>
+                    <div class="topnav-right">
+                        <a href="#"
+                           class="menu-link"
+                           data-bs-toggle="modal" data-bs-target="#modalRequest"
+                        >Make request</a>
+                        <div class="top-social">
+                            <a href="" class="top-social-link" title="telegram">
+                                <em class="icon icomoon-telegram"></em>
+                            </a>
+                            <a href="" class="top-social-link" title="whatsapp">
+                                <em class="icon icomoon-whatsapp"></em>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lang-menu">
+                        <ul class="lang-menu-list">
+                            <li class="selected">UA</li>
+                            <li>PL</li>
+                            <li>EN</li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="menuToggle" class="topnav-menu-toggle hamburger hamburger--elastic">
+                    <div class="hamburger-box">
+                        <div class="hamburger-inner"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section class="page-header services-header">
+                <div class="page-title">
+                    <h2 class="page-title-title">Services</h2>
+                </div>
+            </section>
+            <section class="services">
+                <div class="accordion" id="accordionServices">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button accordion-button--l"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne"
+                                    aria-expanded="false"
+                                    aria-controls="collapseOne">
+                                Interior design
+                            </button>
+                        </h2>
+                        <div id="collapseOne"
+                             class="accordion-collapse collapse"
+                             aria-labelledby="headingOne"
+                             data-bs-parent="#accordionServices">
+                            <div class="accordion-body">
+                                <div class="accordion" id="accordionService">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingOneService">
+                                            <button class="accordion-button accordion-button--m"
+                                                    type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseOneService"
+                                                    aria-expanded="false"
+                                                    aria-controls="collapseOneService">
+                                                Design project
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOneService"
+                                             class="accordion-collapse collapse"
+                                             aria-labelledby="headingOneService"
+                                             data-bs-parent="#accordionService">
+                                            <div class="accordion-body">
+                                                <div class="accordion" id="accordionServiceInner">
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingOneServiceInner">
+                                                            <button class="accordion-button accordion-button--s"
+                                                                    type="button"
+                                                                    data-bs-toggle="collapse"
+                                                                    data-bs-target="#collapseOneServiceInner"
+                                                                    aria-expanded="false"
+                                                                    aria-controls="collapseOneServiceInner">
+                                                                When ordering a design project, you get:
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapseOneServiceInner"
+                                                             class="accordion-collapse collapse"
+                                                             aria-labelledby="headingOneServiceInner"
+                                                             data-bs-parent="#accordionServiceInner">
+                                                            <div class="accordion-body">
+                                                                <div class="accordion-body-inner">
+                                                                    <ul class="style-disc">
+                                                                        <li>2 - 3 layout options;</li>
+                                                                        <li>3-D visualization of rooms (4 - 10 views for each room);</li>
+                                                                        <li>Measurement scheme;</li>
+                                                                        <li>Wall dismantling scheme;</li>
+                                                                        <li>Wall mounting scheme;</li>
+                                                                        <li>Furniture layout plan;</li>
+                                                                        <li>Scheme of sockets and electrical equipment;</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="accordion" id="accordionServiceTwo">
+                                    <div class="accordion-item">
+                                        <h2 class="accordion-header" id="headingOneServiceTwo">
+                                            <button class="accordion-button accordion-button--m"
+                                                    type="button"
+                                                    data-bs-toggle="collapse"
+                                                    data-bs-target="#collapseOneServiceTwo"
+                                                    aria-expanded="false"
+                                                    aria-controls="collapseOneServiceTwo">
+                                                Author's support
+                                            </button>
+                                        </h2>
+                                        <div id="collapseOneServiceTwo"
+                                             class="accordion-collapse collapse"
+                                             aria-labelledby="headingOneServiceTwo"
+                                             data-bs-parent="#accordionService">
+                                            <div class="accordion-body">
+                                                <div class="accordion" id="accordionServiceInnerTwo">
+                                                    <div class="accordion-item">
+                                                        <h2 class="accordion-header" id="headingOneServiceInnerTwo">
+                                                            <button class="accordion-button accordion-button--s"
+                                                                    type="button"
+                                                                    data-bs-toggle="collapse"
+                                                                    data-bs-target="#collapseOneServiceInnerTwo"
+                                                                    aria-expanded="false"
+                                                                    aria-controls="collapseOneServiceInnerTwo">
+                                                                When ordering a design project, you get:
+                                                            </button>
+                                                        </h2>
+                                                        <div id="collapseOneServiceInnerTwo"
+                                                             class="accordion-collapse collapse"
+                                                             aria-labelledby="headingOneServiceInnerTwo"
+                                                             data-bs-parent="#accordionServiceInnerTwo">
+                                                            <div class="accordion-body">
+                                                                <div class="accordion-body-inner">
+                                                                    <ul class="style-disc">
+                                                                        <li>2 - 3 layout options;</li>
+                                                                        <li>3-D visualization of rooms (4 - 10 views for each room);</li>
+                                                                        <li>Measurement scheme;</li>
+                                                                        <li>Wall dismantling scheme;</li>
+                                                                        <li>Wall mounting scheme;</li>
+                                                                        <li>Furniture layout plan;</li>
+                                                                        <li>Scheme of sockets and electrical equipment;</li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button accordion-button--l"
+                                    type="button"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo"
+                                    aria-expanded="false"
+                                    aria-controls="collapseTwo">
+                                Architectural 3d visualization
+                            </button>
+                        </h2>
+                        <div id="collapseTwo"
+                             class="accordion-collapse collapse"
+                             aria-labelledby="headingTwo"
+                             data-bs-parent="#accordionServices">
+                            <div class="accordion-body">
+                                <div class="accordion-body">
+                                    some features
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="steps">
+                <h3 class="steps-title">The cooperation and payment algorithm is as follows:</h3>
+                <div class="steps-container">
+                    <ul class="steps-list">
+                        <li class="steps-list-item">Technical task from the customer. Payment 30%.</li>
+                        <li class="steps-list-item">Measurements of the apartment and layout (up to 4 options).</li>
+                        <li class="steps-list-item">Visualization development (up to 3 options). Payment 40%.</li>
+                        <li class="steps-list-item">Creation of working documentation.</li>
+                        <li class="steps-list-item">Issuing an album of working documentation. Payment 30%.</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer-contacts w-100 gap-md-2">
+                <div class="footer-request order-md-1 flex-grow-1">
+                    <button class="btn btn--main justify-content-center mx-auto btn--l footer-request-button"
+                            data-bs-toggle="modal" data-bs-target="#modalRequest"
+                    >Make request</button>
+                </div>
+                <div class="footer-contacts-contacts order-md-0">
+                    <h5>Contacts:</h5>
+                    <p>Poland: <a href="tel:+48789345621" class="link-mobile link-inherit">+48789345621</a></p>
+                    <p>Ukraine: <a href="tel:+380681088544" class="link-mobile link-inherit">+380681088544</a></p>
+                    <a href="mailto:epatantdesign@gmail.com" class="link-inherit">epatantdesign@gmail.com</a>
+                </div>
+                <div class="d-flex justify-content-between justify-content-md-end order-md-2">
+                    <div class="footer-contacts-social-text">
+                        <h5>Follow us:</h5>
+                        <div class="d-flex flex-column">
+                            <a href="#" class="link-inherit">Instagram</a>
+                            <a href="#" class="link-inherit">Facebook</a>
+                            <a href="#" class="link-inherit">Behance</a>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column justify-content-between d-md-none">
+                        <a href="" class="footer-social-link" title="telegram">
+                            <em class="icon icomoon-telegram"></em>
+                        </a>
+                        <a href="" class="footer-social-link" title="whatsapp">
+                            <em class="icon icomoon-whatsapp"></em>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-settings w-100 gap-md-2">
+                <div class="footer-settings-theme justify-content-md-end order-md-2">
+                    <button id="theme-toggle" class="theme-toggle">
+                        <span class="light" title="light"></span>
+                        <span class="dark" title="dark"></span>
+                    </button>
+                </div>
+                <div class="footer-settings-accent order-md-0">
+                    <ul class="accent-toggle">
+                        <li class="colors" data-color="pink" title="pink"></li>
+                        <li class="colors" data-color="orange" title="orange"></li>
+                        <li class="colors" data-color="yellow" title="yellow"></li>
+                        <li class="colors" data-color="green" title="green"></li>
+                        <li class="colors" data-color="blue" title="blue"></li>
+                        <li class="colors" data-color="gray" title="gray"></li>
+                    </ul>
+                </div>
+                <div class="order-md-1 flex-grow-1 text-center">
+                    <p class="m-0">&copy; Epatant 2007 — 2023 </p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div id="modalRequest" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Make request</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body px-4">
+                    <h6 class="form-title">We will contact you as soon as it possible</h6>
+                    <form action="">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                        </div>
+                        <div class="mb-3">
+                            <label for="city" class="form-label">Your city</label>
+                            <input type="text" class="form-control" id="city" placeholder="Enter your city">
+                        </div>
+                        <div class="mb-3">
+                            <label for="service" class="form-label">Service</label>
+                            <select id="service" class="form-select selectpicker" data-placeholder="Select a service fom the list">
+                                <option value=""></option>
+                                <option value="1">Interior design</option>
+                                <option value="2">Architectural 3d visualization</option>
+                                <option value="3">Landscape design</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="property" class="form-label">Property type</label>
+                            <select id="property" class="form-select selectpicker" data-placeholder="Select a property type fom the list">
+                                <option value=""></option>
+                                <option value="1">House / apartment</option>
+                                <option value="2">Restaurant / Cafe / Bar</option>
+                                <option value="3">Hotel</option>
+                                <option value="4">Wellness</option>
+                                <option value="5">Retail</option>
+                                <option value="6">Corporate</option>
+                                <option value="7">Cultural</option>
+                                <option value="8">Other</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="meters" class="form-label">Floor area in square meters</label>
+                            <input type="text" class="form-control" id="meters" placeholder="What the area of your project?">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" class="form-control" placeholder="What are you thought about this project?"></textarea>
+                        </div>
+                        <div class="text-end mt-5">
+                            <button type="submit" class="btn btn--outline-main" data-bs-dismiss="modal">Send request</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="htdocs/js/bootstrap.bundle.min.js"></script>
+    <script src="htdocs/js/select2.min.js"></script>
+    <script src="htdocs/js/photoswipe/photoswipe-lightbox.umd.min.js"></script>
+    <script src="htdocs/js/photoswipe/photoswipe.umd.min.js"></script>
+    <script src="htdocs/js/main.js"></script>
+
+    <script type="text/javascript">
+
+
+    </script>
+
+</body>
+</html>
