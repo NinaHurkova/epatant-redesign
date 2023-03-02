@@ -17,45 +17,48 @@
 </head>
 <body>
     <div class="container-fluid container--custom">
-        <header class="header">
-            <div class="topnav">
-                <a href="index.html" class="topnav-logo"><h1>Epatant</h1></a>
-                <div class="topnav-menu">
-                    <nav class="menu">
-                        <a href="about.html" class="menu-link is-active">About us</a>
-                        <a href="projects.html" class="menu-link">Projects</a>
-                        <a href="services.html" class="menu-link">Services</a>
-                        <a href="contacts.html" class="menu-link">Contacts</a>
-                    </nav>
-                    <div class="topnav-right">
-                        <a href="#"
-                           class="menu-link"
-                           data-bs-toggle="modal" data-bs-target="#modalRequest"
-                        >Make request</a>
-                        <div class="top-social">
-                            <a href="" class="top-social-link" title="telegram">
-                                <em class="icon icomoon-telegram"></em>
-                            </a>
-                            <a href="" class="top-social-link" title="whatsapp">
-                                <em class="icon icomoon-whatsapp"></em>
-                            </a>
+        <div class="header--fixed">
+            <div class="progresbar"></div>
+            <header class="header">
+                <div class="topnav">
+                    <a href="index.html" class="topnav-logo"><h1>Epatant</h1></a>
+                    <div class="topnav-menu">
+                        <nav class="menu">
+                            <a href="about.html" class="menu-link is-active">About us</a>
+                            <a href="projects.html" class="menu-link">Projects</a>
+                            <a href="services.html" class="menu-link">Services</a>
+                            <a href="contacts.html" class="menu-link">Contacts</a>
+                        </nav>
+                        <div class="topnav-right">
+                            <a href="#"
+                               class="menu-link"
+                               data-bs-toggle="modal" data-bs-target="#modalRequest"
+                            >Make request</a>
+                            <div class="top-social">
+                                <a href="" class="top-social-link" title="telegram">
+                                    <em class="icon icomoon-telegram"></em>
+                                </a>
+                                <a href="" class="top-social-link" title="whatsapp">
+                                    <em class="icon icomoon-whatsapp"></em>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="lang-menu">
+                            <ul class="lang-menu-list">
+                                <li class="selected">UA</li>
+                                <li>PL</li>
+                                <li>EN</li>
+                            </ul>
                         </div>
                     </div>
-                    <div class="lang-menu">
-                        <ul class="lang-menu-list">
-                            <li class="selected">UA</li>
-                            <li>PL</li>
-                            <li>EN</li>
-                        </ul>
+                    <div id="menuToggle" class="topnav-menu-toggle hamburger hamburger--elastic">
+                        <div class="hamburger-box">
+                            <div class="hamburger-inner"></div>
+                        </div>
                     </div>
                 </div>
-                <div id="menuToggle" class="topnav-menu-toggle hamburger hamburger--elastic">
-                    <div class="hamburger-box">
-                        <div class="hamburger-inner"></div>
-                    </div>
-                </div>
-            </div>
-        </header>
+            </header>
+        </div>
         <main class="main">
             <div class="about-container">
                 <section class="page-header about-header">
@@ -142,9 +145,8 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Make request</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body px-4">
+                <div class="modal-body">
                     <h6 class="form-title">We will contact you as soon as it possible</h6>
                     <form action="">
                         <div class="mb-3">
@@ -195,7 +197,7 @@
                             <textarea id="message" class="form-control" placeholder="What are you thought about this project?"></textarea>
                         </div>
                         <div class="text-end mt-5">
-                            <button type="submit" class="btn btn--outline-main" data-bs-dismiss="modal">Send request</button>
+                            <button type="submit" class="btn btn--outline-main mw-240" data-bs-dismiss="modal">Send request</button>
                         </div>
                     </form>
                 </div>

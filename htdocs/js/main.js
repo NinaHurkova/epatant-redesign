@@ -86,4 +86,24 @@ colors.forEach(function(color) {
         localStorage.setItem('accentColor',color.dataset.color);
 
     })
-})
+});
+
+//Header on scroll
+const scrollHeight = $('.header').height();
+
+$(window).scroll(function() {
+    if ($(this).scrollTop() > scrollHeight) {
+        $('.header--fixed').addClass('hide-up');
+    } else {
+        $('.header--fixed').removeClass('hide-up');
+    }
+});
+
+//Scroll progress
+$(document).on("scroll", function(){
+  const pixels = $(document).scrollTop();
+  const pageHeight = $(document).height() - $(window).height();
+  const progress = 100 * pixels / pageHeight;
+
+  $("div.progresbar").css("width", progress + "%");
+});
