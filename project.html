@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="htdocs/font/font.css">
     <link rel="stylesheet" href="htdocs/font/font-icon.css">
 
-    <link rel="stylesheet" href="htdocs/css/select2.min.css">
     <link rel="stylesheet" href="htdocs/css/photoswipe.css">
     <link rel="stylesheet" href="htdocs/css/base.css">
 
@@ -223,7 +222,7 @@
                         <label for="commentMessage" class="form-label">Message</label>
                         <textarea id="commentMessage" class="form-control" placeholder="What are you thought about this project?"></textarea>
                     </div>
-                    <div class="text-end mt-5">
+                    <div class="comments-form-buttons">
                         <button type="submit" class="btn btn--outline-main mw-240">Post your comment</button>
                     </div>
                 </form>
@@ -310,19 +309,19 @@
                             <label for="city" class="form-label">Your city</label>
                             <input type="text" class="form-control" id="city" placeholder="Enter your city">
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-3 selectholder">
                             <label for="service" class="form-label">Service</label>
-                            <select id="service" class="form-select selectpicker" data-placeholder="Select a service fom the list">
-                                <option value=""></option>
+                            <select id="service" class="form-select selectpicker">
+                                <option value="" disabled>Select a service fom the list</option>
                                 <option value="1">Interior design</option>
                                 <option value="2">Architectural 3d visualization</option>
                                 <option value="3">Landscape design</option>
                             </select>
                         </div>
-                        <div class="mb-3">
+                        <div class="mb-3 selectholder">
                             <label for="property" class="form-label">Property type</label>
-                            <select id="property" class="form-select selectpicker" data-placeholder="Select a property type fom the list">
-                                <option value=""></option>
+                            <select id="property" class="form-select selectpicker">
+                                <option value="" disabled>Select a property type fom the list</option>
                                 <option value="1">House / apartment</option>
                                 <option value="2">Restaurant / Cafe / Bar</option>
                                 <option value="3">Hotel</option>
@@ -351,7 +350,6 @@
     </div>
 
     <script src="htdocs/js/bootstrap.bundle.min.js"></script>
-    <script src="htdocs/js/select2.min.js"></script>
     <script src="htdocs/js/photoswipe/photoswipe-lightbox.umd.min.js"></script>
     <script src="htdocs/js/photoswipe/photoswipe.umd.min.js"></script>
     <script src="htdocs/js/main.js"></script>

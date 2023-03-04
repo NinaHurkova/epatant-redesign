@@ -14,18 +14,6 @@ $("#menuToggle").on("click",function(){
     $("body").toggleClass('overflow-hidden');
 });
 
-$(document).ready(function() {
-    $('.selectpicker').each(function () {
-        let selectpicker = $(this);
-        let placeholder = $(selectpicker).data('placeholder');
-        selectpicker.select2({
-            dropdownCssClass: 'selectpicker-dropdown',
-            minimumResultsForSearch: '-1',
-            placeholder: placeholder
-        });
-    })
-});
-
 // https://photoswipe.com/
 var lightbox = new PhotoSwipeLightbox({
     gallery: '.gallery--lightbox',
@@ -107,3 +95,72 @@ $(document).on("scroll", function(){
 
   $("div.progresbar").css("width", progress + "%");
 });
+
+//Selectpicker
+$('.selectpicker').each(function() {
+    const _this = $(this),
+        label = $("label[for='" + $(this).attr('id') + "']"),
+        selectOption = _this.find('option'),
+        selectOptionLength = selectOption.length,
+        selectedOption = selectOption.filter(':selected'),
+        duration = 450; // длительность анимации
+
+    _this.hide();
+    _this.wrap('<div class="select"></div>');
+    $('<div>', {
+        class: 'new-select has-placeholder',
+        text: _this.children('option:disabled').text()
+    }).insertAfter(_this);
+
+    const selectHead = _this.next('.new-select');
+    $('<div>', {
+        class: 'new-select__list'
+    }).insertAfter(selectHead);
+
+    const selectList = selectHead.next('.new-select__list');
+    for (let i = 1; i < selectOptionLength; i++) {
+        $('<div>', {
+            class: 'new-select__item',
+            html: $('<span>', {
+                text: selectOption.eq(i).text()
+            })
+        })
+        .attr('data-value', selectOption.eq(i).val())
+        .appendTo(selectList);
+    }
+
+    const selectItem = selectList.find('.new-select__item');
+    selectList.slideUp(0);
+    selectHead.on('click', function() {
+        if ( !$(this).hasClass('on') ) {
+            $(this).addClass('on');
+            selectList.slideDown(duration);
+
+            selectItem.on('click', function() {
+                let chooseItem = $(this).data('value');
+
+                $('select').val(chooseItem).attr('selected', 'selected');
+                selectHead.text( $(this).find('span').text() ).removeClass('has-placeholder');
+                $(label).addClass('colored')
+
+                selectList.slideUp(duration);
+                selectHead.removeClass('on');
+            });
+
+        } else {
+            $(this).removeClass('on');
+            selectList.slideUp(duration);
+        }
+    });
+});
+
+//Form labels
+$('.form-control').on('change', function () {
+    const label = $("label[for='" + $(this).attr('id') + "']");
+    if($(this).val()){
+        $(label).addClass('colored')
+    }else{
+        $(label).removeClass('colored')
+    }
+});
+

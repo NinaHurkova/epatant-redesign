@@ -27,7 +27,7 @@
 }
 
 :root[accent=pink] {
-  --var-additionalAcent: #F2B0AB;
+  --var-additionalAcent: #FFC6C2;
   --var-mainAcent: #E5A5A3;
 }
 
@@ -3819,7 +3819,7 @@ textarea.form-control-lg {
   --bs-accordion-btn-icon-transform: none;
   --bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
   --bs-accordion-btn-active-icon: ;
-  --bs-accordion-btn-focus-border-color: inherit;
+  --bs-accordion-btn-focus-border-color: var(--var-mainAcent);
   --bs-accordion-btn-focus-box-shadow: none;
   --bs-accordion-body-padding-x: 0;
   --bs-accordion-body-padding-y: 0;
@@ -10097,6 +10097,19 @@ body {
   background: var(--var-bgcolor);
   color: var(--var-fontcolor);
 }
+@media (min-width: 1024px) {
+  .modal-dialog {
+    max-width: 608px;
+  }
+  .modal-header, .modal-body {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  .modal-title {
+    font-size: 4.5rem;
+    font-weight: 700;
+  }
+}
 
 .form-title {
   margin-bottom: 1em;
@@ -10106,6 +10119,10 @@ body {
 
 .form-label, .form-control, .form-select {
   font-size: 1.125rem;
+}
+
+.form-label.colored {
+  color: var(--var-mainAcent);
 }
 
 .form-control, .form-select {
@@ -10129,72 +10146,72 @@ textarea.form-control {
   height: 3em;
 }
 
-.select2 {
+.select {
   display: block;
+  width: 100%;
+  position: relative;
 }
-.select2-container--default .select2-selection--single {
+
+.new-select {
+  position: relative;
+  padding: 0;
+  padding-right: 45px;
   border-radius: 0;
   border: 0;
   border-bottom: var(--var-borderWidth) solid var(--var-additionalAcent);
   background: var(--var-bgcolor);
   color: var(--var-fontcolor);
-  height: auto;
   font-size: 1.125rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
-.select2-container--default .select2-selection--single .select2-selection__rendered {
-  padding: 0;
-  padding-right: 45px;
-  color: inherit;
-  line-height: inherit;
-}
-.select2-container--default .select2-selection--single .select2-selection__placeholder {
-  color: var(--var-additionalAcent);
-}
-.select2-container--default .select2-selection--single .select2-selection__arrow {
-  right: 20px;
-  width: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.select2-container--default .select2-selection--single .select2-selection__arrow b {
-  position: static;
-  margin: 0;
+.new-select:after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translate(-20px, -50%);
+          transform: translate(-20px, -50%);
   border-color: var(--var-mainAcent) transparent transparent transparent;
   border-style: solid;
   border-width: 9px 8px 0 8px;
 }
-.select2-container--default.select2-container--focus .select2-selection--single {
-  border-bottom-width: 2px;
+.new-select.on:after {
+  -webkit-transform: translate(-20px, -50%) rotate(180deg);
+          transform: translate(-20px, -50%) rotate(180deg);
 }
-.select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
-  border-color: transparent transparent var(--var-mainAcent) transparent;
-  border-width: 0 8px 9px 8px;
+.new-select.has-placeholder {
+  color: var(--var-additionalAcent);
 }
-.select2-container--default.select2-container--open .select2-dropdown {
-  margin-top: 1px;
-}
-
-.selectpicker-dropdown {
-  z-index: 10000;
-  border-radius: 0 !important;
+.new-select__list {
+  position: relative;
+  padding: 1.625rem;
   background-color: var(--var-additionalAcent);
   color: var(--var-mainAcent);
   border: 0;
   font-size: 1.125rem;
+  cursor: pointer;
+  width: 100%;
+  z-index: 2;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
-.selectpicker-dropdown .select2-results__option--highlighted.select2-results__option--selectable {
-  background: transparent;
+.new-select__list.on {
+  display: block;
+}
+.new-select__item + .new-select__item {
+  margin-top: 0.625rem;
+}
+.new-select__item span {
+  display: block;
+}
+.new-select__item span:hover {
   color: var(--var-fontcolor);
-}
-.selectpicker-dropdown .select2-results__options {
-  padding: 1.625rem;
 }
 
 .project-gallery {
@@ -10360,7 +10377,7 @@ textarea.form-control {
 }
 @media (min-width: 1024px) {
   .page-header {
-    padding: 3rem 4.8rem 3rem 4rem;
+    padding: 4.5rem 4rem 3rem 4rem;
   }
 }
 
@@ -10385,6 +10402,11 @@ textarea.form-control {
   font-weight: 700;
   font-size: 3.75rem;
 }
+@media (min-width: 1024px) {
+  .page-title-title {
+    font-size: 4.5rem;
+  }
+}
 
 @media (min-width: 1024px) {
   .projects-header {
@@ -10394,6 +10416,7 @@ textarea.form-control {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding-top: 48px;
   }
   .projects-header .page-title, .projects-header .projects-description {
     width: 50%;
@@ -10555,6 +10578,10 @@ textarea.form-control {
 .comments-form {
   padding: 2.125rem;
 }
+.comments-form-buttons {
+  margin-top: 2.125rem;
+  text-align: center;
+}
 @media (min-width: 1024px) {
   .comments {
     padding: 4rem;
@@ -10570,6 +10597,10 @@ textarea.form-control {
   .comments-form {
     width: 50%;
     padding: 4rem;
+  }
+  .comments-form-buttons {
+    margin-top: 4rem;
+    text-align: right;
   }
 }
 
@@ -10620,6 +10651,7 @@ textarea.form-control {
   padding: 0;
   background-color: transparent;
   font-size: 0.75rem;
+  color: var(--var-fontcolor);
 }
 .comment-link:hover {
   background-color: transparent;
@@ -10833,7 +10865,6 @@ textarea.form-control {
     padding: 0 1rem;
     gap: 3.75rem;
     font-size: 1.125rem;
-    text-align: center;
   }
   .steps-list-item:before {
     width: calc(100% + 32px);
@@ -10895,7 +10926,8 @@ textarea.form-control {
     margin-right: auto;
   }
   .about-header {
-    padding: 4rem 0;
+    padding-left: 0;
+    padding-right: 0;
   }
   .about-body {
     padding: 4rem 0;
@@ -10942,7 +10974,8 @@ textarea.form-control {
     margin-right: auto;
   }
   .contacts-header {
-    padding: 4rem 0;
+    padding-left: 0;
+    padding-right: 0;
   }
   .contacts-body {
     padding: 0 0 4rem 0;
