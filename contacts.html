@@ -146,39 +146,57 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">Make request</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                        <span class="btn-close-inner"></span>
+                    </button>
                 </div>
                 <div class="modal-body">
                     <h6 class="form-title">We will contact you as soon as it possible</h6>
-                    <form action="">
-                        <div class="mb-3">
+                    <form action="" class=" needs-validation" novalidate>
+                        <div class="form-group">
                             <label for="name" class="form-label">Name</label>
-                            <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                            <div class="invalid-feedback order-first">
+                                Error message
+                            </div>
                         </div>
-                        <div class="mb-3">
+                        <div class="form-group">
                             <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+                            <div class="invalid-feedback order-first">
+                                Error message
+                            </div>
                         </div>
-                        <div class="mb-3">
+                        <div class="form-group">
                             <label for="phone" class="form-label">Phone</label>
-                            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number">
+                            <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" required>
+                            <div class="invalid-feedback order-first">
+                                Error message
+                            </div>
                         </div>
-                        <div class="mb-3">
+                        <div class="form-group">
                             <label for="city" class="form-label">Your city</label>
-                            <input type="text" class="form-control" id="city" placeholder="Enter your city">
+                            <input type="text" class="form-control" id="city" placeholder="Enter your city" required>
+                            <div class="invalid-feedback order-first">
+                                Error message
+                            </div>
                         </div>
-                        <div class="mb-3 selectholder">
+                        <div class="form-group selectholder">
                             <label for="service" class="form-label">Service</label>
-                            <select id="service" class="form-select selectpicker">
-                                <option value="" disabled>Select a service fom the list</option>
+                            <select id="service" class="form-select selectpicker" required>
+                                <option value="" data-placeholder>Select a service fom the list</option>
                                 <option value="1">Interior design</option>
                                 <option value="2">Architectural 3d visualization</option>
                                 <option value="3">Landscape design</option>
                             </select>
+                            <div class="invalid-feedback order-first">
+                                Error message
+                            </div>
                         </div>
-                        <div class="mb-3 selectholder">
+                        <div class="form-group selectholder">
                             <label for="property" class="form-label">Property type</label>
-                            <select id="property" class="form-select selectpicker">
-                                <option value="" disabled>Select a property type fom the list</option>
+                            <select id="property" class="form-select selectpicker" required>
+                                <option value="" data-placeholder>Select a property type fom the list</option>
                                 <option value="1">House / apartment</option>
                                 <option value="2">Restaurant / Cafe / Bar</option>
                                 <option value="3">Hotel</option>
@@ -188,17 +206,29 @@
                                 <option value="7">Cultural</option>
                                 <option value="8">Other</option>
                             </select>
+                            <div class="invalid-feedback order-first">
+                                Error message
+                            </div>
                         </div>
-                        <div class="mb-3">
+                        <div class="form-group">
                             <label for="meters" class="form-label">Floor area in square meters</label>
-                            <input type="text" class="form-control" id="meters" placeholder="What the area of your project?">
+                            <input type="text" class="form-control" id="meters" placeholder="What the area of your project?" required>
+                            <div class="invalid-feedback order-first">
+                                Error message
+                            </div>
                         </div>
-                        <div class="mb-3">
+                        <div class="form-group">
                             <label for="message" class="form-label">Message</label>
-                            <textarea id="message" class="form-control" placeholder="What are you thought about this project?"></textarea>
+                            <textarea id="message" class="form-control" placeholder="What are you thought about this project?" required></textarea>
+                            <div class="invalid-feedback order-first">
+                                Error message
+                            </div>
                         </div>
-                        <div class="text-end mt-5">
-                            <button type="submit" class="btn btn--outline-main mw-240" data-bs-dismiss="modal">Send request</button>
+                        <div class="invalid-feedback-form">
+                            One or more fields contain invalid data.Check all the fields highlighted in red and enter the data correctly using the hints.
+                        </div>
+                        <div class="text-center text-lg-end mt-5">
+                            <button type="submit" class="btn btn--outline-main mw-240">Send request</button>
                         </div>
                     </form>
                 </div>

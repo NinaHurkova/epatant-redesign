@@ -140,6 +140,7 @@ $('.selectpicker').each(function() {
                 let chooseItem = $(this).data('value');
 
                 $('select').val(chooseItem).attr('selected', 'selected');
+                _this.parents('.form-group').removeClass('has-mistake');
                 selectHead.text( $(this).find('span').text() ).removeClass('has-placeholder');
                 $(label).addClass('colored')
 
@@ -165,25 +166,27 @@ $('.form-control').on('change', function () {
 });
 
 //Form validation
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-(function () {
-  'use strict'
 
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  var forms = document.querySelectorAll('.needs-validation')
-
-  // Loop over them and prevent submission
-  Array.prototype.slice.call(forms)
-    .forEach(function (form) {
-      form.addEventListener('submit', function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault();
-          event.stopPropagation();
-          form.classList.add('has-mistakes')
+$('.needs-validation').on("submit", function(event){
+  let valid = true;
+  $('[required]').each(function() {
+    if ($(this).is(':invalid') || !$(this).val()) {
+        valid = false;
+        $(this).parents('.form-group').addClass('has-mistake');
+        event.preventDefault();
+        event.stopPropagation();
+    }else{
+        $(this).parents('.form-group').removeClass('has-mistake');
+    }
+  });
+  if (!valid) $('.invalid-feedback-form').show();
+  else $('.invalid-feedback-form').hide();
+});
+$('[required]').each(function(){
+    $(this).on('change', function () {
+        if (!$(this).is(':invalid') || !$(this).val()) {
+            $(this).parents('.form-group').removeClass('has-mistake');
         }
-
-        form.classList.add('was-validated')
-      }, false)
+        console.log(this)
     })
-})();
-
+});
